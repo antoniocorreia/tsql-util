@@ -1,0 +1,10 @@
+ALTER FULLTEXT INDEX ON Estabelecimento DISABLE
+ALTER FULLTEXT INDEX ON Estabelecimento DROP (Nome)
+
+ALTER TABLE Estabelecimento ALTER COLUMN Nome NVARCHAR(500) NOT NULL
+
+ALTER FULLTEXT INDEX ON Estabelecimento add (Nome) 
+ALTER FULLTEXT INDEX ON Estabelecimento enable
+
+
+
